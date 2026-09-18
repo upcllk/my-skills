@@ -38,6 +38,15 @@ python3 /path/to/custom-skills/local-skill-install/scripts/install_local_skill.p
   /path/to/custom-skills/my-skill
 ```
 
+当安装器本身通过另一个 checkout 的软链接调用，而源 skill 位于另一个
+`custom-skills` 工作区时，显式指定源工作区：
+
+```bash
+python3 /path/to/my-skills/local-skill-install/scripts/install_local_skill.py \
+  --workspace-root /path/to/custom-skills \
+  /path/to/custom-skills/my-skill
+```
+
 在命令后添加 `--dry-run` 可预览链接操作。安装器始终链接到 `~/.agents/skills`。
 
 ## 更新或移除

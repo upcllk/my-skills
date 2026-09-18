@@ -11,6 +11,11 @@ from pathlib import Path
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path, help="Skill folder containing SKILL.md")
+    parser.add_argument(
+        "--workspace-root",
+        type=Path,
+        help="Override the workspace root when the installer itself is reached through another checkout",
+    )
     parser.add_argument("--replace", action="store_true", help="Replace an existing symbolic-link target")
     parser.add_argument("--dry-run", action="store_true", help="Show the planned action only")
     return parser.parse_args()
@@ -26,7 +31,11 @@ def main() -> None:
     source = args.source.expanduser().resolve()
     # The installer lives at <workspace>/local-skill-install/scripts/.
     # Derive the workspace root so this repository can be relocated safely.
-    workspace_root = Path(__file__).resolve().parents[2]
+    workspace_root = (
+        args.workspace_root.expanduser().resolve()
+        if args.workspace_root
+        else Path(__file__).resolve().parents[2]
+    )
     destination = (Path.home() / ".agents" / "skills").resolve()
 
     if not source.is_dir() or not (source / "SKILL.md").is_file():
