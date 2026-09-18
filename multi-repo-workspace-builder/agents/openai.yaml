@@ -1,0 +1,4 @@
+interface:
+  display_name: "多代码库工作区构建"
+  short_description: "构建带独立 Git 和安全本地链接的多代码库工作区。"
+  default_prompt: "使用 $multi-repo-workspace-builder 为这个项目建立多代码库工作区，并通过本地符号链接接入现有代码库。"

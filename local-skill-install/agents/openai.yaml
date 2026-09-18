@@ -1,0 +1,4 @@
+interface:
+  display_name: "安装本地 Skill"
+  short_description: "在工作区创建并通过软链接安装本地技能"
+  default_prompt: "使用 $local-skill-install 在 custom-skills 工作区创建此技能，并将其链接到 ~/.agents/skills。"

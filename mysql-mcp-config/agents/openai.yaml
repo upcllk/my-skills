@@ -1,0 +1,4 @@
+interface:
+  display_name: "MySQL MCP 配置"
+  short_description: "维护本地 MySQL MCP 的共享源配置"
+  default_prompt: "使用 $mysql-mcp-config 维护我的本地 MySQL MCP 服务器源配置。"

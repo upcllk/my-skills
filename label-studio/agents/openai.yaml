@@ -1,0 +1,7 @@
+interface:
+  display_name: "Label Studio 操作"
+  short_description: "检查并安全规划 Label Studio 标注工作"
+  default_prompt: "使用 $label-studio 检查 Label Studio 项目 9 的标注状态。"
+
+policy:
+  allow_implicit_invocation: true

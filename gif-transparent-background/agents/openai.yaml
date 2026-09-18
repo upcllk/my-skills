@@ -1,0 +1,4 @@
+interface:
+  display_name: "GIF Transparent Background"
+  short_description: "逐帧去除 GIF 背景并保留原动画"
+  default_prompt: "用逐帧前景分割把 GIF 背景变透明，保留原动画并输出 GIF 或 WebP。"
