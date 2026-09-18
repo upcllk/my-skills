@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Publisher"
+  short_description: "将本地 skill 迁移到远端多 skill 仓库并维护软链接"
+  default_prompt: "使用 $skill-publisher 管理本地 skill 与 GitHub 远端多 skill 仓库的迁移、软链接和发布"
